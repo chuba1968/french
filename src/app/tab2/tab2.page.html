@@ -1,0 +1,184 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Tab 2</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+<div class="container">
+
+  <ion-searchbar showCancelButton="focus"  [(ngModel)]="filterTerm" animated="true"></ion-searchbar>
+</div>
+
+  <div class="blackdiv">
+   <!-- white area child div-->
+
+
+    <div>
+
+
+<ion-button>
+  <ion-icon slot="end" name="list-circle" class="buticon"></ion-icon>Domaines de pratique
+</ion-button>
+
+      <swiper [pagination]="true" class="product-slider" [slidesPerView]="" [loop]="true"  effect="fade"  [spaceBetween]="20">
+
+
+        <ng-template swiperSlide>
+          <img [defaultImage]="'https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif?20151024034921'" [lazyLoad]="'https://live.staticflickr.com/5655/22092524311_685f91d90f_z.jpg'">
+
+        </ng-template>
+
+        <ng-template swiperSlide>
+          <img [defaultImage]="'https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif?20151024034921'" [lazyLoad]="'https://media.istockphoto.com/photos/bitcoin-symbol-and-gavel-to-regulate-cryptocurrencies-market-picture-id1328513560?k=20&m=1328513560&s=612x612&w=0&h=NNq00Apktjdw_dBVgk0tnON6KDYw0UJpj-3bwD1qX-A='">
+        </ng-template>
+        <ng-template swiperSlide>
+          <img [defaultImage]="'https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif?20151024034921'" [lazyLoad]="'https://www.marineinsight.com/wp-content/uploads/2021/06/Top-5-Important-Books-on-Maritime-Law.png'">
+        </ng-template>
+
+        <ng-template swiperSlide>
+          <img [defaultImage]="'https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif?20151024034921'" [lazyLoad]="'https://i.pinimg.com/originals/99/9d/6d/999d6d62540955a0af1a73885a1d3a86.jpg'">
+        </ng-template>
+
+
+
+        <ng-template swiperSlide>
+          <img [defaultImage]="'https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif?20151024034921'" [lazyLoad]="'https://blog.ipleaders.in/wp-content/uploads/2020/09/copyright-laws.jpg'">
+        </ng-template>
+        <ng-template swiperSlide>
+          <img [defaultImage]="'https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif?20151024034921'" [lazyLoad]="'https://s3-eu-west-1.amazonaws.com/wi-ebay-pictures/EBAY/86/62/32/232668601452_images.linnlive.com_32ff16d100d2c3e767a610b66b3a88c3_5441686b-e61f-44c5-ba73-aa8a34c19de9.jpeg'">
+        </ng-template>
+
+
+
+        <ng-template swiperSlide>
+          <img [defaultImage]="'https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif?20151024034921'" [lazyLoad]="'
+          https://thumbs.dreamstime.com/b/commercial-law-gavel-table-commercial-law-gavel-105441879.jpg'">
+        </ng-template>
+
+        <ng-template swiperSlide>
+
+          <img [defaultImage]="'https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif?20151024034921'" [lazyLoad]="'https://www.hkiaacademy.com/files/course_file/50/Hong-Kong-International-Aviation-Academy-Introduction-to-Aviation-Law.jpg'"></ng-template>
+
+      </swiper>
+
+      <p class="para">nous sommes avocats et notaires bilingues
+      </p>
+
+
+    <ion-item  item lines="none" *ngFor="let data of boyRecords | filter:filterTerm" [routerLink]="['/practice']" routerLinkActive="router-link-active">
+          <ion-thumbnail slot="start">
+            <img src="/assets/inbox.gif">
+          </ion-thumbnail>
+          <ion-label>
+            <h2>{{data.id}}</h2>
+            <p>{{data.name}}</p>
+          </ion-label>
+          <ion-icon name="chevron-forward" slot="end"></ion-icon>
+        </ion-item>
+
+        <ion-item  item lines="none" *ngFor="let data of boyRecords1 | filter:filterTerm" [routerLink]="['/practice']" routerLinkActive="router-link-active">
+          <ion-thumbnail slot="start">
+            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAAAAACH5BAAAAAAALAAAAAABAAEAAAICTAEAOw==">
+          </ion-thumbnail>
+          <ion-label>
+            <h2>{{data.id}}</h2>
+            <p>{{data.name}}</p>
+          </ion-label>
+          <ion-icon name="chevron-forward" slot="end"></ion-icon>
+        </ion-item>
+
+
+
+        <ion-item  item lines="none" *ngFor="let data of boyRecords2 | filter:filterTerm" [routerLink]="['/practice']" routerLinkActive="router-link-active">
+          <ion-thumbnail slot="start" >
+            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAAAAACH5BAAAAAAALAAAAAABAAEAAAICTAEAOw==">
+          </ion-thumbnail>
+          <ion-label>
+            <h2>{{data.id}}</h2>
+            <p>{{data.name}}</p>
+          </ion-label>
+          <ion-icon name="chevron-forward" slot="end"></ion-icon>
+        </ion-item>
+
+
+        <ion-item  item lines="none" *ngFor="let data of boyRecords3 | filter:filterTerm" [routerLink]="['/practice']" routerLinkActive="router-link-active">
+          <ion-thumbnail slot="start">
+            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAAAAACH5BAAAAAAALAAAAAABAAEAAAICTAEAOw==">
+          </ion-thumbnail>
+          <ion-label>
+            <h2>{{data.id}}</h2>
+            <p>{{data.name}}</p>
+          </ion-label>
+          <ion-icon name="chevron-forward" slot="end"></ion-icon>
+        </ion-item>
+
+
+
+<h2 class="para"> Lawyers </h2>
+<swiper [pagination]="true" class="product-slider2" [slidesPerView]="2" [loop]="true"  effect="fade"  [spaceBetween]="10">
+  <ng-template swiperSlide>
+
+<ion-button (click)="showInterstitialAd()" [routerLink]="['/maritime']" routerLinkActive="router-link-active">
+  <ion-icon slot="icon-only" name="add"></ion-icon>
+</ion-button>
+
+  </ng-template>
+
+  <ng-template swiperSlide>
+    <div>
+      <img [defaultImage]="'https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif?20151024034921'" [lazyLoad]="'https://thumbs.dreamstime.com/b/portrait-female-lawyer-court-holding-brief-book-51714307.jpg'">
+
+
+    </div>
+
+  </ng-template>
+
+  <ng-template swiperSlide>
+    <div>
+      <img [defaultImage]="'https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif?20151024034921'" [lazyLoad]="'https://www.nairaland.com/attachments/4946956_dsc0582_jpegba2caf3c66c2f5aa3cdff5a77fdee626'">
+
+    </div>
+  </ng-template>
+
+  <ng-template swiperSlide>
+    <div>
+      <img [defaultImage]="'https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif?20151024034921'" [lazyLoad]="'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxEsZgGwHjYFBTgO7JAMSv8JV3Umrc8-SbDQ&usqp=CAU'">
+
+    </div>
+  </ng-template>
+  </swiper>
+<ion-card class="container3">
+  <ion-card-content (click)="showBannerAd()">
+    <h2 class="para" > Qoutes</h2>
+    <p class="para">
+      <!-- Section 21 of the Land Use Act 2004  Prohibits the alienation of customary right of occupancy except with requisite consent or approval by the governor appropriate Local Government.-->
+      L'article 21 de la loi nigériane sur l'utilisation des terres de 2004 interdit l'aliénation du droit d'occupation coutumier, sauf avec le consentement ou l'approbation requis par le gouverneur compétent Gouvernement local
+
+    </p>
+
+  </ion-card-content >
+ </ion-card>
+
+ <span class="space">
+
+ </span>
+
+
+
+  </div>
+
+</div>
+
+
+
+
+</ion-content>

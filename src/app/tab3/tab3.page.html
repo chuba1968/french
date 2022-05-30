@@ -1,0 +1,30 @@
+<ion-header>
+
+</ion-header>
+<ion-content>
+
+
+
+
+  <div class="blackdiv">
+    <div>
+  <img [defaultImage]="'https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif?20151024034921'" [lazyLoad]="'/assets/Mobile Marketing-cuate.svg'">
+
+    </div>
+  </div>
+
+  <div class="container">
+  <div>
+
+
+      <ngx-twitter-timeline
+      [data]="{sourceType: 'url', url: 'https://twitter.com/bilinguallaw'}"
+      [opts]="{tweetLimit: 1}"
+    ></ngx-twitter-timeline>
+
+
+  </div>
+  </div>
+
+
+</ion-content>

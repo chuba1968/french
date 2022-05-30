@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button text="" icon="chevron-back"></ion-back-button>
+    </ion-buttons>
+
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ais-instantsearch [config]="config">
+    <ais-search-box
+    placeholder="Search for products..."
+  ></ais-search-box>
+
+  <ais-highlight attribute="title" [hit]="hit"></ais-highlight>
+
+
+
+
+
+
+      <ais-hits>
+      <ng-template let-hits="hits">
+
+        <p *ngFor="let hit of hits" class="ais-Hits-item">
+           {{hit.title}}
+           <a href="http:// {{hit.url}}">link</a>
+           {{hit.content}}
+            </p>
+
+      </ng-template>
+    </ais-hits>
+  </ais-instantsearch>
+
+
+
+
+</ion-content>
